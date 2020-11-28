@@ -27,7 +27,7 @@ class PrototypesController < ApplicationController
 
   def edit
     @prototype = Prototype.find(params[:id])
-    redirect_to root_path
+    # redirect_to root_path
   end
 
   def update
