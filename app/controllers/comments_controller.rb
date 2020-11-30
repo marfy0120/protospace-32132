@@ -5,9 +5,9 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to prototype_path(@comment.prototype)
     else
-      @prototype = @comment.prototype_id
+      @prototype = @comment.prototype
       @comments = @prototype.comments
-      render :create
+      render "prototypes/show"
     end
     
   end
